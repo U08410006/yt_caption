@@ -12,7 +12,7 @@ y = 580 # y-axis of picture start
 w = 1120 # width of pic
 h = 150 # height of pic
 
-for i in range(15800): 
+for i in range(5000): 
  
     path = 'pic/out' + str(i+1) + '.png'
     img = cv2.imread(path)
@@ -25,6 +25,6 @@ for i in range(15800):
 
     for j in range(l):
         f.write(result[j])
-        f.write(" ")
+        f.write("&")
     f.write('\n')
 
