@@ -5,20 +5,20 @@ output_file = open('cut_point.txt', 'w', encoding='utf-8')
 lines = input_file.readlines()
 input_file.close()
 
-num = ['0','1','2','3','4','5','6','7','8','9',' ','\n']
+num = ['0','1','2','3','4','5','6','7','8','9',' ','\n'] # the words can't have nums
 
 line_cnt = 0
 left_last = ""
 right_last = ""
 for line in lines:
     line_cnt += 1
-    content = line.split('&')
-    if(len(content) > 3):
+    content = line.split('&') # spilt into two part
+    if(len(content) > 3): # there have more than two parts
         print("noise error: ",line_cnt)
         continue
-    elif(len(content) == 2 ):
+    elif(len(content) == 2 ):  # there just one part
         content[1] = content[0]
-    elif(len(content) == 1):
+    elif(len(content) == 1): # there have no content
         content[0] = ""
         content.append("")
     left_now = content[0]
