@@ -12,13 +12,13 @@ left_last = ""
 right_last = ""
 for line in lines:
     line_cnt += 1
-    content = line.split('&') # spilt into two part
-    if(len(content) > 3): # there have more than two parts
+    content = line.split('&') # spilt it into two part
+    if(len(content) > 3): # there are more than two parts
         print("noise error: ",line_cnt)
         continue
     elif(len(content) == 2 ):  # there just one part
         content[1] = content[0]
-    elif(len(content) == 1): # there have no content
+    elif(len(content) == 1): # there is no content
         content[0] = ""
         content.append("")
     left_now = content[0]
@@ -37,4 +37,3 @@ for line in lines:
 
     
     
- 
