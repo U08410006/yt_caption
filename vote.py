@@ -41,8 +41,6 @@ for line in lines:
     if(dis_left >= 2 and dis_right >= 2):
         left_most = max(set(left_block), key=left_block.count)
         right_most = max(set(right_block), key=right_block.count)
-        # left_most = max(left_block,key=left_block.count)
-        # right_most = max(right_block,key=right_block.count)
         output_file.write("台 : " + left_most + "，國 : " + right_most + "，時間 : " + sec2time(line_cnt_last) + " ~ " + sec2time(line_cnt) + '\n')
         line_cnt_last = line_cnt
         left_block.clear()
