@@ -12,10 +12,14 @@ y = 580 # y-axis of picture start
 w = 1120 # width of pic
 h = 150 # height of pic
 
-for i in range(1000): 
- 
+for i in range(15710): 
+    
     path = 'pic/out' + str(i+1) + '.png'
-    img = cv2.imread(path)
+
+    try:
+        img = cv2.imread(path)
+    except:
+        break
 
     crop_img = img[y:y+h, x:x+w]
     cv2.imwrite('output.png', crop_img) # save img to read
